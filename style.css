@@ -1,7 +1,7 @@
 body {
     display: grid;
     grid-template-columns: 250px 4fr;
-    grid-template-rows: 1fr 6fr;
+    grid-template-rows: 200px 900px;
     margin: 0;
     font-family: "Roboto", sans-serif;
 }
@@ -11,12 +11,71 @@ body {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 5rem 6rem;
+    padding: 0 3rem 0 2rem;
+    box-shadow: 0 6px 8px -4px #94a3b8;
+    z-index: 1;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+#siteSearch{
+    flex-grow: 1;
+    border-style: none;
+    border-radius: 16px;
+    background-color: #e2e8f0;
+    height: 2rem;
+    margin-left: 1rem;
 }
 
 .userInfo {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.greeting {
     display: grid;
-    grid-template-columns: 30px 30px 30px;
+    grid-template-columns: 100px 400px;
+    grid-template-rows: 30px 70px;
+}
+
+.greeting img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.greeting p {
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.userTag {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: end;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.buttons button {
+    background-color: #0ea5e9;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    width: 6rem;
+    height: 2.3rem;
+    border-radius: 24px;
 }
 
 #sidebar {
@@ -38,6 +97,7 @@ body {
 .primary {
     display: grid;
     grid-template-rows: repeat(6, 50px);
+    max-width: 100%;
 }
 
 .secondary {
@@ -55,8 +115,11 @@ body {
     display: grid;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
+    background-color: #cbd5e1;
+    padding: 1rem;
+    gap: 1rem;
 }
 
 .projects {
@@ -66,21 +129,81 @@ body {
 
 .cardContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 1rem;
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     height: 200px;
+    border-radius: 8px;
+    background-color: white;
+    padding: 1.5rem;
+    box-shadow: 0 6px 8px -4px #94a3b8;
+    position: relative;
+}
+
+.cardActions {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.cardHeader {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.cardBody {
+    color: #475569;
+    margin-top: 0.5rem;
+}
+
+.announcements {
+    grid-row: 1 / 2;
 }
 
 .announcementsContainer {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 6px 8px -4px #94a3b8;
+}
+
+.separate {
+    border-top: 2px solid #cbd5e1;
+}
+
+.previewHeader{
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 1rem 0 0 0;
+}
+
+.previewBody {
+    font-size: 0.8rem;
+    color: #475569;
+    max-height: 2.5rem;
+}
+.trending {
+    padding-bottom: 1.5rem;
+    grid-row: 2 / 3;
 }
 
 .trendingContainer {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 80px);
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 6px 8px -4px #94a3b8;
 }
 
 .trendingProfile {
@@ -91,6 +214,20 @@ body {
 
 .trendingPFP {
     grid-row: 1 / 3;
+    align-self: center;
+    justify-self: center;
+}
+
+.trendingTag {
+    margin: 0;
+    align-self: end;
+    font-size: 0.9rem;
+}
+
+.trendingProject {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #475569;
 }
 
 a {
