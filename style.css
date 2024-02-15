@@ -1,0 +1,62 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 6fr;
+}
+
+#header {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#sidebar {
+    display:grid;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    grid-template-rows: 1fr 3fr 2fr;
+}
+
+#main-content {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.projects {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+.card {
+    height: 200px;
+}
+
+.announcementsContainer {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.trendingContainer {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.trendingProfile {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.trendingPFP {
+    grid-row: 1 / 3;
+}
